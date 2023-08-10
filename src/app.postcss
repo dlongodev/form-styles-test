@@ -1,4 +1,30 @@
 /* Write your global styles here, in PostCSS syntax */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&family=Mulish:ital,wght@0,300;0,400;0,600;0,800;1,300;1,400;1,600;1,800&display=swap');
+
 @tailwind base;
 @tailwind components;
-@tailwind utilities
+@tailwind utilities;
+
+:root {
+	/* =~= Theme Properties =~= */
+	--theme-font-family-base: 'Mulish', sans-serif;
+	--theme-font-family-heading: 'Inter', sans-serif;
+	--theme-text-color-base: #415968;
+	--theme-text-color-heading: #1d282f;
+}
+
+@layer base {
+	html {
+		font-family: var(--theme-font-family-base);
+		color: var(--theme-text-color-base);
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	@apply font-bold font-inter text-neutral-900;
+}
